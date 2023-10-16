@@ -19,6 +19,20 @@ public class LRUCache<K, V> {
     }
 
     public void put(Model<K, V> model) {
+        int emptyPosition = -1;
+        for (int i = 0; i < list.size(); i++) {
+            // if any position is null, add an item there
+            if (list.get(i) == null) {
+                emptyPosition = i;
+                break;
+            }
+        }
+        if (emptyPosition != -1) {
+            list.set(emptyPosition, model);
+        } else {
+            list.remove(0);
+            list.add(model);
+        }
     }
 
     public V get(K key) {
