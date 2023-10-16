@@ -1,4 +1,4 @@
 package org.yadavvi;
 
-public class LRUCache {
+public class LRUCache<K, V> {
 }

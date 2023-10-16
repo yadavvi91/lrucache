@@ -5,8 +5,6 @@ import org.junit.jupiter.api.Test;
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class LRUCacheTest {
     @Test
     public void testCache() {
@@ -20,17 +18,5 @@ class LRUCacheTest {
         if (map.size() == 5) {
 
         }
-
-
     }
-
-    class LRUCache<K, V> {
-
-    }
-
-    class Model<K, V> {
-        String K;
-        String V;
-    }
-
 }
